@@ -15,6 +15,7 @@ class ShopApplicationTests {
 
 	@Test
 	void contextLoads() {
+		int bb = 100;
 		int a=100;
 		Calendar cal = Calendar.getInstance();
 		int year = cal.get(Calendar.YEAR);
