@@ -1,0 +1,33 @@
+<script>
+    $(document).ready(function(){
+        $('#wt_form > button').click(function(){
+            $('#wt_form').attr(
+                {
+                    'action':'[[@{/wtimpl}]]',
+                    'method':'post'
+                }
+            );
+            $('#wt_form').submit();
+        });
+    });
+    </script>
+
+
+<div class="container">
+    <div class="col-sm-8">
+        <h2>Weather Info Page</h2>
+        <form id="wt_form">
+
+            <div class="form-group">
+                <label for="loc">LOCATION:</label>
+                <input type="text" class="form-control" id="loc" placeholder="Enter loc" name="loc">
+            </div>
+
+            <button class="btn btn-default">Search</button>
+        </form>
+        <textarea class="form-control" cols="100" rows="20" id="comment"
+        th:text = "${result}">
+
+        </textarea>
+    </div>
+</div>
